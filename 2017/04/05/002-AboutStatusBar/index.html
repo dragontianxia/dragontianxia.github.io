@@ -3,19 +3,19 @@
 <head>
   <meta charset="utf-8">
   
-  <title>002-AboutStatusBar | Ron&#39;s Blog</title>
+  <title>About Personal Hotspot | Ron&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="####为什么要看这个？前两天在高铁上玩 iPad 时，接入了 iPhone 的 Personal Hotspot，忽然想到很多应用尤其是视频类的应用，会在播放时判断设备是否是 Wi-Fi 状态，但是接入的 Hotspot 状态如何判断呢？ ####尝试想法  首先想到最常用的是 AFNetworkReachabilityManager 来判断网络状态123456typedef NS_ENUM(N">
+  <meta name="description" content="为什么要看这个？前两天在高铁上玩 iPad 时，接入了 iPhone 的 Personal Hotspot，忽然想到很多应用尤其是视频类的应用，会在播放时判断设备是否是 Wi-Fi 状态，但是接入的 Hotspot 状态如何判断呢？ 尝试想法 首先想到最常用的是 AFNetworkReachabilityManager 来判断网络状态123456typedef NS_ENUM(NSInteger,">
 <meta name="keywords" content="iOS">
 <meta property="og:type" content="article">
-<meta property="og:title" content="002-AboutStatusBar">
+<meta property="og:title" content="About Personal Hotspot">
 <meta property="og:url" content="http://dragontianxia.github.io/2017/04/05/002-AboutStatusBar/index.html">
 <meta property="og:site_name" content="Ron's Blog">
-<meta property="og:description" content="####为什么要看这个？前两天在高铁上玩 iPad 时，接入了 iPhone 的 Personal Hotspot，忽然想到很多应用尤其是视频类的应用，会在播放时判断设备是否是 Wi-Fi 状态，但是接入的 Hotspot 状态如何判断呢？ ####尝试想法  首先想到最常用的是 AFNetworkReachabilityManager 来判断网络状态123456typedef NS_ENUM(N">
-<meta property="og:updated_time" content="2017-04-05T13:06:05.000Z">
+<meta property="og:description" content="为什么要看这个？前两天在高铁上玩 iPad 时，接入了 iPhone 的 Personal Hotspot，忽然想到很多应用尤其是视频类的应用，会在播放时判断设备是否是 Wi-Fi 状态，但是接入的 Hotspot 状态如何判断呢？ 尝试想法 首先想到最常用的是 AFNetworkReachabilityManager 来判断网络状态123456typedef NS_ENUM(NSInteger,">
+<meta property="og:updated_time" content="2017-04-05T13:11:38.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="002-AboutStatusBar">
-<meta name="twitter:description" content="####为什么要看这个？前两天在高铁上玩 iPad 时，接入了 iPhone 的 Personal Hotspot，忽然想到很多应用尤其是视频类的应用，会在播放时判断设备是否是 Wi-Fi 状态，但是接入的 Hotspot 状态如何判断呢？ ####尝试想法  首先想到最常用的是 AFNetworkReachabilityManager 来判断网络状态123456typedef NS_ENUM(N">
+<meta name="twitter:title" content="About Personal Hotspot">
+<meta name="twitter:description" content="为什么要看这个？前两天在高铁上玩 iPad 时，接入了 iPhone 的 Personal Hotspot，忽然想到很多应用尤其是视频类的应用，会在播放时判断设备是否是 Wi-Fi 状态，但是接入的 Hotspot 状态如何判断呢？ 尝试想法 首先想到最常用的是 AFNetworkReachabilityManager 来判断网络状态123456typedef NS_ENUM(NSInteger,">
   
     <link rel="alternate" href="/atom.xml" title="Ron&#39;s Blog" type="application/atom+xml">
   
@@ -78,7 +78,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      002-AboutStatusBar
+      About Personal Hotspot
     </h1>
   
 
@@ -86,9 +86,8 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>####为什么要看这个？<br>前两天在高铁上玩 iPad 时，接入了 iPhone 的 Personal Hotspot，忽然想到很多应用尤其是视频类的应用，会在播放时判断设备是否是 Wi-Fi 状态，但是接入的 Hotspot 状态如何判断呢？</p>
-<p>####尝试想法</p>
-<ul>
+        <h4 id="为什么要看这个？"><a href="#为什么要看这个？" class="headerlink" title="为什么要看这个？"></a>为什么要看这个？</h4><p>前两天在高铁上玩 iPad 时，接入了 iPhone 的 Personal Hotspot，忽然想到很多应用尤其是视频类的应用，会在播放时判断设备是否是 Wi-Fi 状态，但是接入的 Hotspot 状态如何判断呢？</p>
+<h4 id="尝试想法"><a href="#尝试想法" class="headerlink" title="尝试想法"></a>尝试想法</h4><ul>
 <li>首先想到最常用的是 <code>AFNetworkReachabilityManager</code> 来判断网络状态<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">typedef NS_ENUM(NSInteger, AFNetworkReachabilityStatus) &#123;</div><div class="line">    AFNetworkReachabilityStatusUnknown          = -1,</div><div class="line">    AFNetworkReachabilityStatusNotReachable     = 0,</div><div class="line">    AFNetworkReachabilityStatusReachableViaWWAN = 1,</div><div class="line">    AFNetworkReachabilityStatusReachableViaWiFi = 2,</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
 </li>
 </ul>
@@ -130,13 +129,13 @@
 </tr>
 </tbody>
 </table>
-<p>####问题解决<br>当 <code>dataNetworkType</code> 为 <em>6</em> 时即表示接入网络为个人热点（<em>显示为 <strong>双环</strong> 图标</em>）。</p>
+<h4 id="问题解决"><a href="#问题解决" class="headerlink" title="问题解决"></a>问题解决</h4><p>当 <code>dataNetworkType</code> 为 <em>6</em> 时即表示接入网络为个人热点（<em>显示为 <strong>双环</strong> 图标</em>）。</p>
 <p>P.S.<br>通过此方法，获取到的其它相关 <code>item</code> 信息如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line">/// 最左侧 返回 （从其它应用跳转来的）</div><div class="line">- 0 : &lt;UIStatusBarBreadcrumbItemView: 0x11fd14c50; frame = (4 0; 63 20); layer = &lt;CALayer: 0x170027b20&gt;&gt; [Item = &lt;UIStatusBarItem: 0x170027b00&gt; [UIStatusBarBreadcrumbItemView (Left)]]</div><div class="line">/// 信号强度</div><div class="line">- 1 : &lt;UIStatusBarSignalStrengthItemView: 0x11fd13e50; frame = (74 0; 35 20); userInteractionEnabled = NO; layer = &lt;CALayer: 0x1700279a0&gt;&gt; [Item = &lt;UIStatusBarItem: 0x1740245a0&gt; [UIStatusBarSignalStrengthItemView (Left)]]</div><div class="line">/// 服务商</div><div class="line">- 2 : &lt;UIStatusBarServiceItemView: 0x11fd14260; frame = (115 0; 50 20); alpha = 0; userInteractionEnabled = NO; layer = &lt;CALayer: 0x170027880&gt;&gt; [Item = &lt;UIStatusBarItem: 0x170023c80&gt; [UIStatusBarServiceItemView (Left)]]</div><div class="line">/// 网络 Wi-Fi or Celluar  //.value(forKeyPath: &quot;dataNetworkType&quot;)</div><div class="line">- 3 : &lt;UIStatusBarDataNetworkItemView: 0x11fd14640; frame = (115 0; 13 20); userInteractionEnabled = NO; layer = &lt;CALayer: 0x1700278a0&gt;&gt; [Item = &lt;UIStatusBarItem: 0x170023c20&gt; [UIStatusBarDataNetworkItemView (Left)]]</div><div class="line">/// VPN</div><div class="line">- 4 : &lt;UIStatusBarIndicatorItemView: 0x11fd14a50; frame = (134 0; 20 20); userInteractionEnabled = NO; layer = &lt;CALayer: 0x170027a80&gt;&gt; [Item = &lt;UIStatusBarItem: 0x170023bc0&gt; [UIStatusBarIndicatorItemView:VPN (Left/Right)]]</div><div class="line">/// 电池</div><div class="line">- 5 : &lt;UIStatusBarBatteryItemView: 0x11fd1a760; frame = (337 0; 33 20); userInteractionEnabled = NO; layer = &lt;CALayer: 0x170029180&gt;&gt; [Item = &lt;UIStatusBarItem: 0x1700237a0&gt; [UIStatusBarBatteryItemView (Right)]]</div><div class="line">/// 蓝牙</div><div class="line">- 6 : &lt;UIStatusBarBluetoothItemView: 0x11fd1af50; frame = (323 0; 8 20); alpha = 0.4; userInteractionEnabled = NO; layer = &lt;CALayer: 0x1700292e0&gt;&gt; [Item = &lt;UIStatusBarItem: 0x1700238e0&gt; [UIStatusBarBluetoothItemView (Right)]]</div><div class="line">/// 闹钟</div><div class="line">- 7 : &lt;UIStatusBarIndicatorItemView: 0x11fd14e70; frame = (307 0; 10 20); userInteractionEnabled = NO; layer = &lt;CALayer: 0x170029340&gt;&gt; [Item = &lt;UIStatusBarItem: 0x170023b80&gt; [UIStatusBarIndicatorItemView:Alarm (Right)]]</div><div class="line">/// VPN ? VPN的图标会根据布局显示在 Left/Right </div><div class="line">- 8 : &lt;UIStatusBarIndicatorItemView: 0x11fd18480; frame = (281 0; 20 20); alpha = 0; userInteractionEnabled = NO; layer = &lt;CALayer: 0x170029420&gt;&gt; [Item = &lt;UIStatusBarItem: 0x170023bc0&gt; [UIStatusBarIndicatorItemView:VPN (Left/Right)]]</div><div class="line">/// 旋转锁</div><div class="line">- 9 : &lt;UIStatusBarIndicatorItemView: 0x11fd15520; frame = (289 0; 12 20); userInteractionEnabled = NO; layer = &lt;CALayer: 0x1700293c0&gt;&gt; [Item = &lt;UIStatusBarItem: 0x170023be0&gt; [UIStatusBarIndicatorItemView:RotationLock (Right)]]</div><div class="line">/// 勿扰模式</div><div class="line">- 10 : &lt;UIStatusBarQuietModeItemView: 0x11fd1a170; frame = (274 0; 9 20); alpha = 0.3; userInteractionEnabled = NO; layer = &lt;CALayer: 0x1700290a0&gt;&gt; [Item = &lt;UIStatusBarItem: 0x174024580&gt; [UIStatusBarQuietModeItemView:QuietMode (Right)]]</div><div class="line">/// 时间</div><div class="line">- 11 : &lt;UIStatusBarTimeItemView: 0x11fd1b520; frame = (172 0; 34 20); userInteractionEnabled = NO; layer = &lt;CALayer: 0x170029620&gt;&gt; [Item = &lt;UIStatusBarItem: 0x174024560&gt; [UIStatusBarTimeItemView (Center)]]</div><div class="line">*/</div></pre></td></tr></table></figure></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://dragontianxia.github.io/2017/04/05/002-AboutStatusBar/" data-id="cj14zmvgr0004jsey3dfwpvsm" class="article-share-link">Share</a>
+      <a data-url="http://dragontianxia.github.io/2017/04/05/002-AboutStatusBar/" data-id="cj14zt4ul0002kneyoe8h0ow3" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/iOS/">iOS</a></li></ul>
@@ -205,7 +204,7 @@
       <ul>
         
           <li>
-            <a href="/2017/04/05/002-AboutStatusBar/">002-AboutStatusBar</a>
+            <a href="/2017/04/05/002-AboutStatusBar/">About Personal Hotspot</a>
           </li>
         
           <li>
