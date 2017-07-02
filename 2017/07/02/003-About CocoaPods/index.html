@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Ron&#39;s Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Before sudo gem update --system need Over the wall gem -v 2.6.7 or later gem sources --add https://gems.ruby-china.org/ --remove https://rubygems.org/ gem sources -l make sure only gems.ruby-china.org">
+<meta name="keywords">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Ron's Blog">
+<meta property="og:url" content="http://dragontianxia.github.io/2017/07/02/003-About CocoaPods/index.html">
+<meta property="og:site_name" content="Ron's Blog">
+<meta property="og:description" content="Before sudo gem update --system need Over the wall gem -v 2.6.7 or later gem sources --add https://gems.ruby-china.org/ --remove https://rubygems.org/ gem sources -l make sure only gems.ruby-china.org">
+<meta property="og:updated_time" content="2017-07-02T12:58:58.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Ron's Blog">
+<meta name="twitter:description" content="Before sudo gem update --system need Over the wall gem -v 2.6.7 or later gem sources --add https://gems.ruby-china.org/ --remove https://rubygems.org/ gem sources -l make sure only gems.ruby-china.org">
+  
+    <link rel="alternate" href="/atom.xml" title="Ron&#39;s Blog" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Ron&#39;s Blog</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://dragontianxia.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-003-About CocoaPods" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/07/02/003-About CocoaPods/" class="article-date">
+  <time datetime="2017-07-02T12:58:54.000Z" itemprop="datePublished">2017-07-02</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="Before"><a href="#Before" class="headerlink" title="Before"></a>Before</h1><ol>
+<li><code>sudo gem update --system</code> need <em>Over the wall</em></li>
+<li><code>gem -v</code> 2.6.7 or later</li>
+<li><code>gem sources --add https://gems.ruby-china.org/ --remove https://rubygems.org/</code></li>
+<li><code>gem sources -l</code> make sure only <em><code>gems.ruby-china.org</code></em></li>
+</ol>
+<h1 id="Install"><a href="#Install" class="headerlink" title="Install"></a>Install</h1><ol>
+<li><code>sudo gem install -n /usr/local/bin cocoapods</code> </li>
+<li><code>pod setup</code> DO NOT break your network, then wait…</li>
+</ol>
+<h1 id="Use"><a href="#Use" class="headerlink" title="Use"></a>Use</h1><ol>
+<li>Create your project</li>
+<li><code>cd &#39;your project home&#39;</code></li>
+<li><code>touch Podfile</code></li>
+<li><code>vim Podfile</code></li>
+<li><code>pod install</code> then wait…</li>
+<li><code>open yourProject.xcworkspace</code></li>
+</ol>
+<h1 id="P-S"><a href="#P-S" class="headerlink" title="P.S."></a>P.S.</h1><ol>
+<li><p>Edit <code>Podfile</code> content</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">platform :ios, &apos;8.0&apos;</div><div class="line"></div><div class="line">target &apos;yourProjectTarget&apos;</div><div class="line"></div><div class="line">pod &apos;JSONKit&apos;</div><div class="line">pod &apos;Reachability&apos;,  &apos;~&gt; 3.0.0&apos;</div><div class="line">end</div></pre></td></tr></table></figure>
+</li>
+<li><p>Get info about cocoaPods index</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">cd ~/.cocoapods</div><div class="line">du -sh *</div></pre></td></tr></table></figure>
+<p> maybe over 1.0G</p>
+</li>
+<li><p>When you modify your Podfile, you need <code>pod update</code></p>
+</li>
+<li>Reference <ol>
+<li><a href="http://blog.devtang.com/2014/05/25/use-cocoapod-to-manage-ios-lib-dependency/" target="_blank" rel="external">用CocoaPods做iOS程序的依赖管理</a></li>
+<li><a href="http://gems.ruby-china.org" target="_blank" rel="external">Ruby China</a></li>
+<li><a href="http://stackoverflow.com/questions/32810808/can-not-perform-pod-install-under-el-capitan-15a279b" target="_blank" rel="external">Can not perform <code>pod install</code> under el capitan (15A279b)</a></li>
+</ol>
+</li>
+</ol>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://dragontianxia.github.io/2017/07/02/003-About CocoaPods/" data-id="cj4mq7du80001zaeyroterz0b" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2017/04/05/002-AboutStatusBar/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          About Personal Hotspot
+        
+      </div>
+    </a>
+  
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Info/">Info</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/iOS/">iOS</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Info/" style="font-size: 10px;">Info</a> <a href="/tags/iOS/" style="font-size: 10px;">iOS</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/07/">July 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2017/07/02/003-About CocoaPods/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2017/04/05/002-AboutStatusBar/">About Personal Hotspot</a>
+          </li>
+        
+          <li>
+            <a href="/2017/04/05/000-TitlePage/">写在前面</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2017 Ron Liu<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>

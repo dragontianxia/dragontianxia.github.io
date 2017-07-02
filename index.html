@@ -61,6 +61,67 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-003-About CocoaPods" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/07/02/003-About CocoaPods/" class="article-date">
+  <time datetime="2017-07-02T12:58:54.000Z" itemprop="datePublished">2017-07-02</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="Before"><a href="#Before" class="headerlink" title="Before"></a>Before</h1><ol>
+<li><code>sudo gem update --system</code> need <em>Over the wall</em></li>
+<li><code>gem -v</code> 2.6.7 or later</li>
+<li><code>gem sources --add https://gems.ruby-china.org/ --remove https://rubygems.org/</code></li>
+<li><code>gem sources -l</code> make sure only <em><code>gems.ruby-china.org</code></em></li>
+</ol>
+<h1 id="Install"><a href="#Install" class="headerlink" title="Install"></a>Install</h1><ol>
+<li><code>sudo gem install -n /usr/local/bin cocoapods</code> </li>
+<li><code>pod setup</code> DO NOT break your network, then wait…</li>
+</ol>
+<h1 id="Use"><a href="#Use" class="headerlink" title="Use"></a>Use</h1><ol>
+<li>Create your project</li>
+<li><code>cd &#39;your project home&#39;</code></li>
+<li><code>touch Podfile</code></li>
+<li><code>vim Podfile</code></li>
+<li><code>pod install</code> then wait…</li>
+<li><code>open yourProject.xcworkspace</code></li>
+</ol>
+<h1 id="P-S"><a href="#P-S" class="headerlink" title="P.S."></a>P.S.</h1><ol>
+<li><p>Edit <code>Podfile</code> content</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">platform :ios, &apos;8.0&apos;</div><div class="line"></div><div class="line">target &apos;yourProjectTarget&apos;</div><div class="line"></div><div class="line">pod &apos;JSONKit&apos;</div><div class="line">pod &apos;Reachability&apos;,  &apos;~&gt; 3.0.0&apos;</div><div class="line">end</div></pre></td></tr></table></figure>
+</li>
+<li><p>Get info about cocoaPods index</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">cd ~/.cocoapods</div><div class="line">du -sh *</div></pre></td></tr></table></figure>
+<p> maybe over 1.0G</p>
+</li>
+<li><p>When you modify your Podfile, you need <code>pod update</code></p>
+</li>
+<li>Reference <ol>
+<li><a href="http://blog.devtang.com/2014/05/25/use-cocoapod-to-manage-ios-lib-dependency/" target="_blank" rel="external">用CocoaPods做iOS程序的依赖管理</a></li>
+<li><a href="http://gems.ruby-china.org" target="_blank" rel="external">Ruby China</a></li>
+<li><a href="http://stackoverflow.com/questions/32810808/can-not-perform-pod-install-under-el-capitan-15a279b" target="_blank" rel="external">Can not perform <code>pod install</code> under el capitan (15A279b)</a></li>
+</ol>
+</li>
+</ol>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://dragontianxia.github.io/2017/07/02/003-About CocoaPods/" data-id="cj4mq7du80001zaeyroterz0b" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-002-AboutStatusBar" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2017/04/05/002-AboutStatusBar/" class="article-date">
@@ -132,7 +193,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://dragontianxia.github.io/2017/04/05/002-AboutStatusBar/" data-id="cj1501o930002lieyxqexkibw" class="article-share-link">Share</a>
+      <a data-url="http://dragontianxia.github.io/2017/04/05/002-AboutStatusBar/" data-id="cj4mq7dui0003zaeyis5he9p7" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/iOS/">iOS</a></li></ul>
@@ -171,7 +232,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://dragontianxia.github.io/2017/04/05/000-TitlePage/" data-id="cj1501o8w0001lieylw4woxa2" class="article-share-link">Share</a>
+      <a data-url="http://dragontianxia.github.io/2017/04/05/000-TitlePage/" data-id="cj4mq7due0002zaeypbcaaxtx" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Info/">Info</a></li></ul>
@@ -214,7 +275,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/07/">July 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a></li></ul>
     </div>
   </div>
 
@@ -225,6 +286,10 @@
     <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2017/07/02/003-About CocoaPods/">(no title)</a>
+          </li>
         
           <li>
             <a href="/2017/04/05/002-AboutStatusBar/">About Personal Hotspot</a>
