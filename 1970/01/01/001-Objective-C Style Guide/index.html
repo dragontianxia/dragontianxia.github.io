@@ -3,14 +3,19 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Ron&#39;s Blog</title>
+  <title>Objective-C Style Guide | Ron&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Ron's Blog">
-<meta property="og:url" content="http://dragontianxia.github.io/index.html">
+  <meta name="description" content="Wenba Objective-C Style Guide 标题标签 : Guide参考 《Google Objective-C Style Guide 中文版》参考 《Coding Guidelines for Cocoa》 大家可讨论修改写在前面： 如果没有具体规范或严格要求，请尽量参考已有代码风格。 方法体之间要有空行留白，但是要减少无必要的空行（禁止超过一行的留白） 命名要清楚明白，不要怕">
+<meta name="keywords" content="iOS">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Objective-C Style Guide">
+<meta property="og:url" content="http://dragontianxia.github.io/1970/01/01/001-Objective-C Style Guide/index.html">
 <meta property="og:site_name" content="Ron's Blog">
+<meta property="og:description" content="Wenba Objective-C Style Guide 标题标签 : Guide参考 《Google Objective-C Style Guide 中文版》参考 《Coding Guidelines for Cocoa》 大家可讨论修改写在前面： 如果没有具体规范或严格要求，请尽量参考已有代码风格。 方法体之间要有空行留白，但是要减少无必要的空行（禁止超过一行的留白） 命名要清楚明白，不要怕">
+<meta property="og:updated_time" content="2017-07-03T00:36:16.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Ron's Blog">
+<meta name="twitter:title" content="Objective-C Style Guide">
+<meta name="twitter:description" content="Wenba Objective-C Style Guide 标题标签 : Guide参考 《Google Objective-C Style Guide 中文版》参考 《Coding Guidelines for Cocoa》 大家可讨论修改写在前面： 如果没有具体规范或严格要求，请尽量参考已有代码风格。 方法体之间要有空行留白，但是要减少无必要的空行（禁止超过一行的留白） 命名要清楚明白，不要怕">
   
     <link rel="alternate" href="/atom.xml" title="Ron&#39;s Blog" type="application/atom+xml">
   
@@ -59,205 +64,7 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-    <article id="post-003-About CocoaPods" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2017/04/20/003-About CocoaPods/" class="article-date">
-  <time datetime="2017-04-19T16:00:00.000Z" itemprop="datePublished">2017-04-20</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/04/20/003-About CocoaPods/">About CocoaPods</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="Before"><a href="#Before" class="headerlink" title="Before"></a>Before</h1><ol>
-<li><code>sudo gem update --system</code> need <em>Over the wall</em></li>
-<li><code>gem -v</code> 2.6.7 or later</li>
-<li><code>gem sources --add https://gems.ruby-china.org/ --remove https://rubygems.org/</code></li>
-<li><code>gem sources -l</code> make sure only <em><code>gems.ruby-china.org</code></em></li>
-</ol>
-<h1 id="Install"><a href="#Install" class="headerlink" title="Install"></a>Install</h1><ol>
-<li><code>sudo gem install -n /usr/local/bin cocoapods</code> </li>
-<li><code>pod setup</code> DO NOT break your network, then wait…</li>
-</ol>
-<h1 id="Use"><a href="#Use" class="headerlink" title="Use"></a>Use</h1><ol>
-<li>Create your project</li>
-<li><code>cd &#39;your project home&#39;</code></li>
-<li><code>touch Podfile</code></li>
-<li><code>vim Podfile</code></li>
-<li><code>pod install</code> then wait…</li>
-<li><code>open yourProject.xcworkspace</code></li>
-</ol>
-<h1 id="P-S"><a href="#P-S" class="headerlink" title="P.S."></a>P.S.</h1><ol>
-<li><p>Edit <code>Podfile</code> content</p>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">platform :ios, &apos;8.0&apos;</div><div class="line"></div><div class="line">target &apos;yourProjectTarget&apos;</div><div class="line"></div><div class="line">pod &apos;JSONKit&apos;</div><div class="line">pod &apos;Reachability&apos;,  &apos;~&gt; 3.0.0&apos;</div><div class="line">end</div></pre></td></tr></table></figure>
-</li>
-<li><p>Get info about cocoaPods index</p>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">cd ~/.cocoapods</div><div class="line">du -sh *</div></pre></td></tr></table></figure>
-<p> maybe over 1.0G</p>
-</li>
-<li><p>When you modify your Podfile, you need <code>pod update</code></p>
-</li>
-<li>Reference <ol>
-<li><a href="http://blog.devtang.com/2014/05/25/use-cocoapod-to-manage-ios-lib-dependency/" target="_blank" rel="external">用CocoaPods做iOS程序的依赖管理</a></li>
-<li><a href="http://gems.ruby-china.org" target="_blank" rel="external">Ruby China</a></li>
-<li><a href="http://stackoverflow.com/questions/32810808/can-not-perform-pod-install-under-el-capitan-15a279b" target="_blank" rel="external">Can not perform <code>pod install</code> under el capitan (15A279b)</a></li>
-</ol>
-</li>
-</ol>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://dragontianxia.github.io/2017/04/20/003-About CocoaPods/" data-id="cj4nf5xbk0005ekeynqjeeumb" class="article-share-link">Delen</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/iOS/">iOS</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-002-AboutStatusBar" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2017/04/05/002-AboutStatusBar/" class="article-date">
-  <time datetime="2017-04-05T10:32:46.000Z" itemprop="datePublished">2017-04-05</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/04/05/002-AboutStatusBar/">About Personal Hotspot</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h4 id="为什么要看这个？"><a href="#为什么要看这个？" class="headerlink" title="为什么要看这个？"></a>为什么要看这个？</h4><p>前两天在高铁上玩 iPad 时，接入了 iPhone 的 Personal Hotspot，忽然想到很多应用尤其是视频类的应用，会在播放时判断设备是否是 Wi-Fi 状态，但是接入的 Hotspot 状态如何判断呢？</p>
-<h4 id="尝试想法"><a href="#尝试想法" class="headerlink" title="尝试想法"></a>尝试想法</h4><ul>
-<li>首先想到最常用的是 <code>AFNetworkReachabilityManager</code> 来判断网络状态<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">typedef NS_ENUM(NSInteger, AFNetworkReachabilityStatus) &#123;</div><div class="line">    AFNetworkReachabilityStatusUnknown          = -1,</div><div class="line">    AFNetworkReachabilityStatusNotReachable     = 0,</div><div class="line">    AFNetworkReachabilityStatusReachableViaWWAN = 1,</div><div class="line">    AFNetworkReachabilityStatusReachableViaWiFi = 2,</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<p>其中<br> <code>AFNetworkReachabilityStatusReachableViaWWAN // Cellular Data</code><br><code>AFNetworkReachabilityStatusReachableViaWiFi  // Wi-Fi &amp; Hotspot</code><br>这就比较尴尬了，不能有效判断使用的 Hotspot，不能解决问题。</p>
-<ul>
-<li><p>尝试搜索类似解决方案<br>看到大部分的帖子转自一篇 <a href="https://my.oschina.net/u/211651/blog/169439" target="_blank" rel="external">《iOS 下获取所有实体/虚拟网卡的信息，并以此判断设备所处的网络状态》</a>，是根据 IP 地址判断 iOS 设备判断是否打开个人热点，似乎也不是我需要的针对性解决方案。</p>
-</li>
-<li><p>那么还是自己动手吧<br>记得之前项目中根据需求有判断过 3G or 4G 网络状态，那么是否从此入手可以解决呢？<br>之前的代码是通过 <code>UIApplication</code> -&gt; <code>statusBar</code> -&gt; <code>foregroundView</code>  的 <code>item</code> 来判断 <code>UIStatusBarDataNetworkItemView</code> -&gt; <code>dataNetworkType</code>。<br>说明白点就是通过 <code>valueForKeyPath</code> 的方式，寻找到 <code>UIStatusBar</code> 上显示网络状态的对应值。</p>
-</li>
-</ul>
-<p>关于<code>dataNetworkType</code>测试如下：</p>
-<table>
-<thead>
-<tr>
-<th style="text-align:left">Type</th>
-<th style="text-align:left">Show</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">1</td>
-<td style="text-align:left">E</td>
-</tr>
-<tr>
-<td style="text-align:left">2</td>
-<td style="text-align:left">3G</td>
-</tr>
-<tr>
-<td style="text-align:left">3</td>
-<td style="text-align:left">4G</td>
-</tr>
-<tr>
-<td style="text-align:left">5</td>
-<td style="text-align:left">Wi-Fi</td>
-</tr>
-<tr>
-<td style="text-align:left">6</td>
-<td style="text-align:left">Hotspot</td>
-</tr>
-</tbody>
-</table>
-<h4 id="问题解决"><a href="#问题解决" class="headerlink" title="问题解决"></a>问题解决</h4><p>当 <code>dataNetworkType</code> 为 <em>6</em> 时即表示接入网络为个人热点（<em>显示为 <strong>双环</strong> 图标</em>）。</p>
-<p>P.S.<br>通过此方法，获取到的其它相关 <code>item</code> 信息如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line">/// 最左侧 返回 （从其它应用跳转来的）</div><div class="line">- 0 : &lt;UIStatusBarBreadcrumbItemView: 0x11fd14c50; frame = (4 0; 63 20); layer = &lt;CALayer: 0x170027b20&gt;&gt; [Item = &lt;UIStatusBarItem: 0x170027b00&gt; [UIStatusBarBreadcrumbItemView (Left)]]</div><div class="line">/// 信号强度</div><div class="line">- 1 : &lt;UIStatusBarSignalStrengthItemView: 0x11fd13e50; frame = (74 0; 35 20); userInteractionEnabled = NO; layer = &lt;CALayer: 0x1700279a0&gt;&gt; [Item = &lt;UIStatusBarItem: 0x1740245a0&gt; [UIStatusBarSignalStrengthItemView (Left)]]</div><div class="line">/// 服务商</div><div class="line">- 2 : &lt;UIStatusBarServiceItemView: 0x11fd14260; frame = (115 0; 50 20); alpha = 0; userInteractionEnabled = NO; layer = &lt;CALayer: 0x170027880&gt;&gt; [Item = &lt;UIStatusBarItem: 0x170023c80&gt; [UIStatusBarServiceItemView (Left)]]</div><div class="line">/// 网络 Wi-Fi or Celluar  //.value(forKeyPath: &quot;dataNetworkType&quot;)</div><div class="line">- 3 : &lt;UIStatusBarDataNetworkItemView: 0x11fd14640; frame = (115 0; 13 20); userInteractionEnabled = NO; layer = &lt;CALayer: 0x1700278a0&gt;&gt; [Item = &lt;UIStatusBarItem: 0x170023c20&gt; [UIStatusBarDataNetworkItemView (Left)]]</div><div class="line">/// VPN</div><div class="line">- 4 : &lt;UIStatusBarIndicatorItemView: 0x11fd14a50; frame = (134 0; 20 20); userInteractionEnabled = NO; layer = &lt;CALayer: 0x170027a80&gt;&gt; [Item = &lt;UIStatusBarItem: 0x170023bc0&gt; [UIStatusBarIndicatorItemView:VPN (Left/Right)]]</div><div class="line">/// 电池</div><div class="line">- 5 : &lt;UIStatusBarBatteryItemView: 0x11fd1a760; frame = (337 0; 33 20); userInteractionEnabled = NO; layer = &lt;CALayer: 0x170029180&gt;&gt; [Item = &lt;UIStatusBarItem: 0x1700237a0&gt; [UIStatusBarBatteryItemView (Right)]]</div><div class="line">/// 蓝牙</div><div class="line">- 6 : &lt;UIStatusBarBluetoothItemView: 0x11fd1af50; frame = (323 0; 8 20); alpha = 0.4; userInteractionEnabled = NO; layer = &lt;CALayer: 0x1700292e0&gt;&gt; [Item = &lt;UIStatusBarItem: 0x1700238e0&gt; [UIStatusBarBluetoothItemView (Right)]]</div><div class="line">/// 闹钟</div><div class="line">- 7 : &lt;UIStatusBarIndicatorItemView: 0x11fd14e70; frame = (307 0; 10 20); userInteractionEnabled = NO; layer = &lt;CALayer: 0x170029340&gt;&gt; [Item = &lt;UIStatusBarItem: 0x170023b80&gt; [UIStatusBarIndicatorItemView:Alarm (Right)]]</div><div class="line">/// VPN ? VPN的图标会根据布局显示在 Left/Right </div><div class="line">- 8 : &lt;UIStatusBarIndicatorItemView: 0x11fd18480; frame = (281 0; 20 20); alpha = 0; userInteractionEnabled = NO; layer = &lt;CALayer: 0x170029420&gt;&gt; [Item = &lt;UIStatusBarItem: 0x170023bc0&gt; [UIStatusBarIndicatorItemView:VPN (Left/Right)]]</div><div class="line">/// 旋转锁</div><div class="line">- 9 : &lt;UIStatusBarIndicatorItemView: 0x11fd15520; frame = (289 0; 12 20); userInteractionEnabled = NO; layer = &lt;CALayer: 0x1700293c0&gt;&gt; [Item = &lt;UIStatusBarItem: 0x170023be0&gt; [UIStatusBarIndicatorItemView:RotationLock (Right)]]</div><div class="line">/// 勿扰模式</div><div class="line">- 10 : &lt;UIStatusBarQuietModeItemView: 0x11fd1a170; frame = (274 0; 9 20); alpha = 0.3; userInteractionEnabled = NO; layer = &lt;CALayer: 0x1700290a0&gt;&gt; [Item = &lt;UIStatusBarItem: 0x174024580&gt; [UIStatusBarQuietModeItemView:QuietMode (Right)]]</div><div class="line">/// 时间</div><div class="line">- 11 : &lt;UIStatusBarTimeItemView: 0x11fd1b520; frame = (172 0; 34 20); userInteractionEnabled = NO; layer = &lt;CALayer: 0x170029620&gt;&gt; [Item = &lt;UIStatusBarItem: 0x174024560&gt; [UIStatusBarTimeItemView (Center)]]</div><div class="line">*/</div></pre></td></tr></table></figure></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://dragontianxia.github.io/2017/04/05/002-AboutStatusBar/" data-id="cj4nf5xb40002ekeyd13k7gnz" class="article-share-link">Delen</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/iOS/">iOS</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-000-TitlePage" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2017/04/05/000-TitlePage/" class="article-date">
-  <time datetime="2017-04-05T08:29:50.000Z" itemprop="datePublished">2017-04-05</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/04/05/000-TitlePage/">写在前面</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>依旧习惯在做事之前写一个《写在前面》，是对接下来的事情的一个解释说明或者预期安排，都算吧。<br>把自己的一些笔记整理一下，发到一个比较集中的博客，一直有此念，却一直没有动手，去年起了个头，却又各种原因半途而废，有些事却很有毅力的一直做下去了，人本来就是矛盾体啊。<br>那么就随便写写吧。</p>
-<p>参考朋友Todd的博文搭建，他有很多值得我学习的地方，很赞！</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://dragontianxia.github.io/2017/04/05/000-TitlePage/" data-id="cj4nf5xaw0001ekeyfpkevhof" class="article-share-link">Delen</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Info/">Info</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-001-Objective-C Style Guide" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-001-Objective-C Style Guide" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/1970/01/01/001-Objective-C Style Guide/" class="article-date">
   <time datetime="1970-01-01T00:00:02.015Z" itemprop="datePublished">1970-01-01</time>
@@ -270,8 +77,8 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/1970/01/01/001-Objective-C Style Guide/">Objective-C Style Guide</a>
+    <h1 class="article-title" itemprop="name">
+      Objective-C Style Guide
     </h1>
   
 
@@ -383,10 +190,19 @@
     </footer>
   </div>
   
-</article>
-
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2017/04/05/000-TitlePage/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Ouder</strong>
+      <div class="article-nav-title">写在前面</div>
+    </a>
+  
+</nav>
 
   
+</article>
 
 </section>
         
